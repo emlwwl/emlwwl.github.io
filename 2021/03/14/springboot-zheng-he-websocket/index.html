@@ -731,18 +731,18 @@
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="5、nginx配置反向代理"><a href="#5、nginx配置反向代理" class="headerlink" title="5、nginx配置反向代理"></a>5、nginx配置反向代理</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">location /wss/ <span class="token punctuation">&#123;</span>
-            proxy_pass http://socket.example.com/<span class="token punctuation">;</span>
-            proxy_set_header Host <span class="token variable">$host</span><span class="token builtin class-name">:</span><span class="token variable">$server_port</span><span class="token punctuation">;</span>
-            proxy_http_version <span class="token number">1.1</span><span class="token punctuation">;</span>
-            proxy_set_header Upgrade <span class="token variable">$http_upgrade</span><span class="token punctuation">;</span>
-            proxy_set_header Connection <span class="token string">"upgrade"</span><span class="token punctuation">;</span>
+<h4 id="5、nginx配置反向代理"><a href="#5、nginx配置反向代理" class="headerlink" title="5、nginx配置反向代理"></a>5、nginx配置反向代理</h4><pre class="line-numbers language-nginx" data-language="nginx"><code class="language-nginx"><span class="token keyword">location</span> <span class="token operator">/</span>wss<span class="token operator">/</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">proxy_pass</span> <span class="token keyword">http</span><span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>socket<span class="token punctuation">.</span>example<span class="token punctuation">.</span>com<span class="token operator">/</span><span class="token punctuation">;</span>
+            <span class="token keyword">proxy_set_header</span> Host <span class="token variable">$host</span><span class="token punctuation">:</span><span class="token variable">$server_port</span><span class="token punctuation">;</span>
+            <span class="token keyword">proxy_http_version</span> <span class="token number">1.1</span><span class="token punctuation">;</span>
+            <span class="token keyword">proxy_set_header</span> Upgrade <span class="token variable">$http_upgrade</span><span class="token punctuation">;</span>
+            <span class="token keyword">proxy_set_header</span> Connection <span class="token string">"upgrade"</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>注意配置关键部分在于HTTP的请求中多了如下： </p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">proxy_set_header Upgrade <span class="token variable">$http_upgrade</span><span class="token punctuation">;</span>
-proxy_set_header Connection <span class="token variable">$connection_upgrade</span><span class="token punctuation">;</span>
-proxy_http_version <span class="token number">1.1</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-nginx" data-language="nginx"><code class="language-nginx"><span class="token keyword">proxy_set_header</span> Upgrade <span class="token variable">$http_upgrade</span><span class="token punctuation">;</span>
+<span class="token keyword">proxy_set_header</span> Connection <span class="token variable">$connection_upgrade</span><span class="token punctuation">;</span>
+<span class="token keyword">proxy_http_version</span> <span class="token number">1.1</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>http1.1协议支持长连接，Upgrade和Connection这两个字段表示请求服务器升级协议为WebSocket。</p>
 
@@ -1137,7 +1137,7 @@ Mysql5.7的rpm包的下载地址 ，这里的版本是5.7.22
                    loop='all'
                    order='random'
                    preload='auto'
-                   volume='0.7'
+                   volume='0.5'
                    list-folded='true'
         >
         </meting-js>
@@ -1156,7 +1156,7 @@ Mysql5.7的rpm包的下载地址 ，这里的版本是5.7.22
             
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">29.1k</span>&nbsp;字
+                class="white-color">30.3k</span>&nbsp;字
             
             
             
