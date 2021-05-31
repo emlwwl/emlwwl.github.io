@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo搭建博客, Willivie&#39;s Blog">
+    <meta name="keywords" content="Eureka配置登录验证, Willivie&#39;s Blog">
     <meta name="description" content="no code,no text!">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo搭建博客 | Willivie&#39;s Blog</title>
+    <title>Eureka配置登录验证 | Willivie&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -203,12 +203,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo搭建博客</h1>
+                    <h1 class="description center-align post-title">Eureka配置登录验证</h1>
                 </div>
             </div>
         </div>
@@ -324,8 +324,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
+                            <a href="/tags/Eureka/">
+                                <span class="chip bg-color">Eureka</span>
                             </a>
                         
                     </div>
@@ -336,8 +336,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Hexo/" class="post-category">
-                                Hexo
+                            <a href="/categories/SpringCloud/" class="post-category">
+                                SpringCloud
                             </a>
                         
                     </div>
@@ -349,7 +349,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-13
+                    2021-05-07
                 </div>
                 
 
@@ -358,14 +358,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    633
+                    319
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -388,54 +388,56 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>官网：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a></p>
-</blockquote>
-<h3 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h3><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，<br>在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<h4 id="具体实现步骤："><a href="#具体实现步骤：" class="headerlink" title="具体实现步骤："></a>具体实现步骤：</h4><ol>
-<li>安装Git bash</li>
-<li>安装Node.js</li>
-<li>安装Hexo</li>
-<li>在Github创建个人仓库</li>
-<li>将博客部署到Github</li>
-<li>发布文章<span id="more"></span></li>
-</ol>
-<p>关于一二步不多做赘述，百度的教程一大堆，下载后安装即可。</p>
-<h3 id="二、安装Hexo"><a href="#二、安装Hexo" class="headerlink" title="二、安装Hexo"></a>二、安装Hexo</h3><p>安装好Node.js后，打开命令行窗口，执行以下命令安装hexo：</p>
-<p><code>npm install hexo-cli -g</code></p>
-<p>安装后可用hexo -v查看版本</p>
-<p>接下来创建自己的博客目录（在任意位置创建一个myblog文件夹即可）</p>
-<p>在myblog文件夹打开命令行窗口，并输出命令：</p>
-<p>首先初始化博客<br><code>hexo init</code></p>
-<p>接下来安装依赖<br><code>npm install</code></p>
-<p>执行完毕后，myblog目录下后出现以下文件：</p>
-<ul>
-<li>node_modules: 依赖包</li>
-<li>public：存放生成的页面</li>
-<li>scaffolds：生成文章的一些模板</li>
-<li>source：用来存放你的文章</li>
-<li>themes：主题</li>
-</ul>
-<p>安装完后即可用<code>hexo s</code>在本地启动，然后访问<code>localhost:4000</code>查看你的博客了</p>
-<p><img src="https://d33wubrfki0l68.cloudfront.net/5997a40576f3beca7bbbd86fe79a795e9d520d8e/87f88/themes/screenshots/landscape.png"></p>
-<h3 id="三、Github创建个人仓库"><a href="#三、Github创建个人仓库" class="headerlink" title="三、Github创建个人仓库"></a>三、Github创建个人仓库</h3><p>首先得注册github，注册后创建仓库（详细图文可百度查找），找到new repository</p>
-<p>创建一个和你用户名相同的仓库，后面加上github.io，例如：username.github.io ，只有这样，将来要部署到GitHub page的时候，才会被识别，其中username就是你注册GitHub的用户名。</p>
-<h3 id="四、将hexo部署到github"><a href="#四、将hexo部署到github" class="headerlink" title="四、将hexo部署到github"></a>四、将hexo部署到github</h3><p>首先全局配置你的Git用户名和邮箱，详情可看教程：<a target="_blank" rel="noopener" href="https://emlwwl.github.io/2020/05/05/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">Git基本操作</a></p>
-<p>配置后将生成的ssh密钥添加到github</p>
-<p>查看ssh是否配置成功：<br><code>ssh -T git@github.com</code></p>
-<p>然后就可以开始部署到Github，在myblog目录下打开命令行窗口，顺序执行下列命令</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save  <span class="token comment">#安装自动部署发布工具</span>
+                <h3 id="一、pom-xml引入依赖"><a href="#一、pom-xml引入依赖" class="headerlink" title="一、pom.xml引入依赖"></a>一、pom.xml引入依赖</h3><pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token comment">&lt;!--eureka server 的依赖,注意是server--></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-cloud-starter-netflix-eureka-server<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
 
-hexo clean  <span class="token comment">#清除缓存</span>
+<span class="token comment">&lt;!--和安全相关的依赖包,我们访问 eureka的需要密码--></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter-security<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-hexo generate  <span class="token comment">#保存修改，生成文件</span>
+<h3 id="二、application-yml中配置"><a href="#二、application-yml中配置" class="headerlink" title="二、application.yml中配置"></a>二、application.yml中配置</h3><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">server</span><span class="token punctuation">:</span>
+  <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">20000</span> <span class="token comment">#程序运行的端口,可以自定义修改</span>
+<span class="token key atrule">spring</span><span class="token punctuation">:</span>
+    <span class="token comment">#配置 eureka 页面的登陆的账号和密码,需要配合security依赖使用</span>
+  <span class="token key atrule">security</span><span class="token punctuation">:</span>
+    <span class="token key atrule">user</span><span class="token punctuation">:</span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> admin   <span class="token comment">#用户名可自行配置</span>
+      <span class="token key atrule">password</span><span class="token punctuation">:</span> admin123  <span class="token comment">#密码可自行配置</span>
+<span class="token key atrule">eureka</span><span class="token punctuation">:</span>
+  <span class="token key atrule">instance</span><span class="token punctuation">:</span>
+    <span class="token key atrule">hostname</span><span class="token punctuation">:</span> localhost <span class="token comment">#eureka服务端的实例名称</span>
+  <span class="token key atrule">client</span><span class="token punctuation">:</span>
+    <span class="token key atrule">fetch-registry</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+    <span class="token key atrule">register-with-eureka</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+    <span class="token key atrule">service-url</span><span class="token punctuation">:</span>
+      <span class="token key atrule">defaultZone</span><span class="token punctuation">:</span> http<span class="token punctuation">:</span>//admin<span class="token punctuation">:</span>admin123@localhost<span class="token punctuation">:</span>20000/eureka/ <span class="token comment">#我们的注册中心的地址</span>
+    <span class="token comment">#单机版的配置,集群只需要启动多个eureka并相互作为客户端配置其他eureka地址即可,为了方便演示,我们使用单机版</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-hexo deploy  <span class="token comment">#发布到远程</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>完成后即可访问username.github.io看到你的博客啦！</p>
-<h3 id="五、发布文章"><a href="#五、发布文章" class="headerlink" title="五、发布文章"></a>五、发布文章</h3><p>部署成功后就可以开始写博文了，文章是.md格式，文件目录默认创建在/myblog/source/_posts下</p>
-<p>新建文章命令：<br><code>hexo new &#39;xxx文件名&#39;</code></p>
-<p>执行后可在本地运行查看效果<br><code>hexo g &amp;&amp; hexo s</code></p>
-<p>最后推荐一个快速简洁好用的markdown编辑器→Typroa，百度搜索下载即可</p>
+<h3 id="三、添加security安全配置类"><a href="#三、添加security安全配置类" class="headerlink" title="三、添加security安全配置类"></a>三、添加security安全配置类</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Configuration</span>
+<span class="token annotation punctuation">@EnableWebSecurity</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">EurekaConfig</span> <span class="token keyword">extends</span> <span class="token class-name">WebSecurityConfigurerAdapter</span> <span class="token punctuation">&#123;</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">configure</span><span class="token punctuation">(</span><span class="token class-name">HttpSecurity</span> http<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">&#123;</span>
+        http<span class="token punctuation">.</span><span class="token function">sessionManagement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sessionCreationPolicy</span><span class="token punctuation">(</span><span class="token class-name">SessionCreationPolicy</span><span class="token punctuation">.</span>NEVER<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//禁用掉 csrf 跨域攻击,以免我们的服务无法注册到 eureka</span>
+        http<span class="token punctuation">.</span><span class="token function">csrf</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">disable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//需要认证所有的请求</span>
+        http<span class="token punctuation">.</span><span class="token function">authorizeRequests</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">anyRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">authenticated</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">and</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">httpBasic</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//符合以下路径规则的放行</span>
+        http<span class="token punctuation">.</span><span class="token function">csrf</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ignoringAntMatchers</span><span class="token punctuation">(</span><span class="token string">"/eureka/**"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">configure</span><span class="token punctuation">(</span>http<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p><img src="https://static01.imgkr.com/temp/6747e162b900440c8c9300e24a2e61a2.png"></p>
 
                 
             </div>
@@ -462,7 +464,7 @@ hexo deploy  <span class="token comment">#发布到远程</span><span aria-hidde
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://willivie.gitee.io/2020/09/13/hexo-shi-xian-wu-fen-zhong-da-jian-bo-ke/">https://willivie.gitee.io/2020/09/13/hexo-shi-xian-wu-fen-zhong-da-jian-bo-ke/</a>
+                    <a href="https://willivie.gitee.io/2021/05/07/eureka-pei-zhi-deng-lu-yan-zheng/">https://willivie.gitee.io/2021/05/07/eureka-pei-zhi-deng-lu-yan-zheng/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -500,8 +502,8 @@ hexo deploy  <span class="token comment">#发布到远程</span><span aria-hidde
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
+                                <a href="/tags/Eureka/">
+                                    <span class="chip bg-color">Eureka</span>
                                 </a>
                             
                         </div>
@@ -549,36 +551,35 @@ hexo deploy  <span class="token comment">#发布到远程</span><span aria-hidde
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/09/13/mysql-chang-yong-ming-ling/">
+                <a href="/2021/05/07/eureka-zhu-ce-zhong-xin/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="MySQL常用命令">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Eureka注册中心">
                         
-                        <span class="card-title">MySQL常用命令</span>
+                        <span class="card-title">Eureka注册中心</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一、常用语句1、查看mysql版本号
- select version(); 
-2、查看当前登录的用户
- select user(); 
-3、查看当前数据库
- select database(); 
+                            
+中文版教程：https://www.springcloud.cc/spring-cloud-netflix.html
+
+一、简介什么是Eureka？
+Eureka是springcloud中的一个负责服务注册和发现的组件。遵循着CPA理论中
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-13
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-07
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/MySQL/" class="post-category">
-                                    MySQL
+                            <a href="/categories/SpringCloud/" class="post-category">
+                                    SpringCloud
                                 </a>
                             
                             
@@ -588,8 +589,8 @@ hexo deploy  <span class="token comment">#发布到远程</span><span aria-hidde
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/MySQL/">
-                        <span class="chip bg-color">MySQL</span>
+                    <a href="/tags/Eureka/">
+                        <span class="chip bg-color">Eureka</span>
                     </a>
                     
                 </div>
@@ -600,51 +601,46 @@ hexo deploy  <span class="token comment">#发布到远程</span><span aria-hidde
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/09/13/hexo-shi-xian-wu-fen-zhong-da-jian-bo-ke/">
+                <a href="/2021/05/07/linux-an-zhuang-zookeeper/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Hexo搭建博客">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Zookeeper 注册中心">
                         
-                        <span class="card-title">Hexo搭建博客</span>
+                        <span class="card-title">Zookeeper 注册中心</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-官网：https://hexo.io/zh-cn/
-
-一、概述Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
-具体实现步骤：
-安装Git 
+                            一、安装前环境配置ZooKeeper是用Java编写的，运行在Java环境上，因此，在部署zk的机器上需要安装Java运行环境。为了正常运行zk，我们需要JRE1.6或者以上的版本。 
+二、下载并解压Zookeeperzookeeper下载
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-07
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Hexo/" class="post-category">
-                                    Hexo
+                            <a href="/categories/SpringCloud/" class="post-category">
+                                    SpringCloud
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
+                    <a href="/tags/Zookeeper/">
+                        <span class="chip bg-color">Zookeeper</span>
                     </a>
                     
                 </div>
