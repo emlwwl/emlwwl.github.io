@@ -754,31 +754,6 @@
     
     
     <entry>
-      <title>Git常用命令</title>
-      <link href="2020/09/13/git-ji-ben-cao-zuo/"/>
-      <url>2020/09/13/git-ji-ben-cao-zuo/</url>
-      
-        <content type="html"><![CDATA[<h3 id="一、全局设置配置用户名和邮箱"><a href="#一、全局设置配置用户名和邮箱" class="headerlink" title="一、全局设置配置用户名和邮箱"></a>一、全局设置配置用户名和邮箱</h3><p>首先安装好git bash后，任意位置打开git bash命令窗口</p><p>输入命令：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config --global user.name <span class="token string">"yourname"</span> <span class="token comment"># 配置账号</span><span class="token function">git</span> config --global user.email <span class="token string">"youremail@xx.com"</span> <span class="token comment"># 配置邮箱</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><span id="more"></span><p>这里顺带说一下config的作用域</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config --local  <span class="token comment"># local只对某个仓库有效</span><span class="token function">git</span> config --global <span class="token comment"># global对所有仓库都有效</span><span class="token function">git</span> config --system <span class="token comment"># system对系统所有登录的用户有效</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>显示config的配置，加 –list</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config --list --global<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="二、生成ssh公钥"><a href="#二、生成ssh公钥" class="headerlink" title="二、生成ssh公钥"></a>二、生成ssh公钥</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh-keygen -t rsa<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>这里说明一下公钥的作用：公钥我们一般是给服务器的，在权限中加入我给的公钥，然后当我从远地仓库中下载项目的时候，服务器通过他的绑定的公钥来匹配我的私钥，这个时候,如果匹配,则就可以正常下载，如果不匹配，则失败。具体参照就是我们拉取GIthub上面的项目时，需要的操作。</p><h3 id="三、常用命令"><a href="#三、常用命令" class="headerlink" title="三、常用命令"></a>三、常用命令</h3><p>1、提交代码到暂存区</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>  <span class="token comment"># （后面一个点代表提交所以修改文件到暂存区）</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>2、提交内容的介绍</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> commit -m <span class="token string">'你的描述'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>3、拉取远程代码</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> pull origin master <span class="token comment">#（这是下拉代码，将远程最新的代码与你本地最新的代码合并）</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>4、推代码至远程分支</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> push origin marter <span class="token comment"># (master为远程分支名)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>5、撤销本地修改（没有add之前，注意空格）</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> checkout <span class="token builtin class-name">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>6、撤销本地修改（add之后，注意空格）</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> reset HEAD <span class="token builtin class-name">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>7、回退版本（commit之后，注意空格）</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> reset –hard HEAD ^ <span class="token comment"># (^ 表示回到上一个版本)</span><span class="token function">git</span> reset –hard HEAD~100 <span class="token comment"># 回退到前100个版本</span><span class="token function">git</span> reset –hard 版本号  <span class="token comment"># 回退到指定版本号</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>8、查看版本号</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> log --pretty<span class="token operator">=</span>oneline<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>9、git 修改远程仓库</p> <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> remote set-url origin http://example.com/test.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>10、查看配置</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config --list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Git </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Git </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Github的几种加速下载方式</title>
       <link href="2020/09/13/github-de-9-chong-jia-su-xia-zai-fang-shi/"/>
       <url>2020/09/13/github-de-9-chong-jia-su-xia-zai-fang-shi/</url>
@@ -796,6 +771,31 @@
         <tags>
             
             <tag> Github </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Git常用命令</title>
+      <link href="2020/09/13/git-ji-ben-cao-zuo/"/>
+      <url>2020/09/13/git-ji-ben-cao-zuo/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、全局设置配置用户名和邮箱"><a href="#一、全局设置配置用户名和邮箱" class="headerlink" title="一、全局设置配置用户名和邮箱"></a>一、全局设置配置用户名和邮箱</h3><p>首先安装好git bash后，任意位置打开git bash命令窗口</p><p>输入命令：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config --global user.name <span class="token string">"yourname"</span> <span class="token comment"># 配置账号</span><span class="token function">git</span> config --global user.email <span class="token string">"youremail@xx.com"</span> <span class="token comment"># 配置邮箱</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><span id="more"></span><p>这里顺带说一下config的作用域</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config --local  <span class="token comment"># local只对某个仓库有效</span><span class="token function">git</span> config --global <span class="token comment"># global对所有仓库都有效</span><span class="token function">git</span> config --system <span class="token comment"># system对系统所有登录的用户有效</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>显示config的配置，加 –list</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config --list --global<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="二、生成ssh公钥"><a href="#二、生成ssh公钥" class="headerlink" title="二、生成ssh公钥"></a>二、生成ssh公钥</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh-keygen -t rsa<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>这里说明一下公钥的作用：公钥我们一般是给服务器的，在权限中加入我给的公钥，然后当我从远地仓库中下载项目的时候，服务器通过他的绑定的公钥来匹配我的私钥，这个时候,如果匹配,则就可以正常下载，如果不匹配，则失败。具体参照就是我们拉取GIthub上面的项目时，需要的操作。</p><h3 id="三、常用命令"><a href="#三、常用命令" class="headerlink" title="三、常用命令"></a>三、常用命令</h3><p>1、提交代码到暂存区</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>  <span class="token comment"># （后面一个点代表提交所以修改文件到暂存区）</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>2、提交内容的介绍</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> commit -m <span class="token string">'你的描述'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>3、拉取远程代码</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> pull origin master <span class="token comment">#（这是下拉代码，将远程最新的代码与你本地最新的代码合并）</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>4、推代码至远程分支</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> push origin marter <span class="token comment"># (master为远程分支名)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>5、撤销本地修改（没有add之前，注意空格）</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> checkout <span class="token builtin class-name">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>6、撤销本地修改（add之后，注意空格）</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> reset HEAD <span class="token builtin class-name">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>7、回退版本（commit之后，注意空格）</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> reset –hard HEAD ^ <span class="token comment"># (^ 表示回到上一个版本)</span><span class="token function">git</span> reset –hard HEAD~100 <span class="token comment"># 回退到前100个版本</span><span class="token function">git</span> reset –hard 版本号  <span class="token comment"># 回退到指定版本号</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>8、查看版本号</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> log --pretty<span class="token operator">=</span>oneline<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>9、git 修改远程仓库</p> <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> remote set-url origin http://example.com/test.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>10、查看配置</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config --list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
             
         </tags>
       
